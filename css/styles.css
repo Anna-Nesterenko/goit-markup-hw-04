@@ -6,7 +6,7 @@
   --background-box-dark: #2f303a;
   --background-box-light: #f5f4fa;
   --margin-cards-thirty: 30px;
-  --border-box: 1px solid #ececec;
+  --color-icon-main: #AFB1B8;
 }
 
 html {
@@ -63,7 +63,7 @@ ul {
 
 /* !header */
 .header {
-  border-bottom: var(--border-box);
+  border-bottom: 1px solid #ececec;
 }
 
 .main-nav,
@@ -128,13 +128,14 @@ ul {
   max-width: 1600px;
   height: 600px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  url(../imeges/offise.jpg);
+    url(../imeges/offise.jpg);
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
@@ -193,15 +194,44 @@ ul {
   display: flex;
   flex-wrap: wrap;
 }
+
 .qualities-li {
   width: 270px;
   margin-right: var(--margin-cards-thirty);
 }
+
+.qualities-li::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: center;
+  background-color: var(--background-box-light);
+}
+
+.icon-lamp::before {
+  background-image: url(../imeges/lamp.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../imeges/clock.svg);
+}
+
+.icon-comp::before {
+  background-image: url(../imeges/comp.svg);
+}
+
+.icon-cosmo::before {
+  background-image: url(../imeges/cosmo.svg);
+}
+
 .qualities-li:last-child {
   margin-right: 0;
 }
 
 .qualities-title {
+  margin-top: var(--margin-cards-thirty);
   margin-bottom: 10px;
   color: var(--second-text-color);
   font-size: 14px;
@@ -248,7 +278,8 @@ ul {
 }
 
 .team-title,
-.examples-title {
+.examples-title,
+.client-title {
   color: var(--second-text-color);
   font-size: 36px;
   line-height: 1.17;
@@ -260,7 +291,12 @@ ul {
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.shadow {
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .team-name,
@@ -276,6 +312,67 @@ ul {
   margin-top: 10px;
   color: var(--main-text-color);
   font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
+.team-social-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--white-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--color-icon-main);
+}
+
+.team-social-icon{
+	fill: currentColor;
+}
+
+.team-social-link:hover,
+.team-social-link:focus{
+background-color: var(--accent-text-color);
+color: var(--white-text-color);
+}
+
+.client-list {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+ }
+
+.client-item + .client-item{
+	margin-left: 30px;
+}
+
+.client-link{
+	width: 170px;
+	height: 92px;
+	background-color: var(--white-text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--color-icon-main);
+	color: var(--color-icon-main);
+}
+
+.client-icon{
+	fill: currentColor;
+}
+
+.client-link:focus, .client-link:hover{
+	border: 1px solid var(--accent-text-color);
+	color: var(--accent-text-color);
 }
 
 /* !footer */
@@ -367,10 +464,12 @@ ul {
   width: calc(100% / 3 - var(--margin-cards-thirty));
   margin-right: var(--margin-cards-thirty);
   margin-top: var(--margin-cards-thirty);
-  border: var(--border-box);
+  border: 1px solid #eeeeee;
 }
+
 .pictures-li:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .pictures-box {
