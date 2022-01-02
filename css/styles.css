@@ -77,18 +77,13 @@ ul {
 	border-radius: 50%;
 }
 
-/* .flex{
-	display: flex;
-  align-items: center;
-} */
-
 /* !header */
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.main-nav,
-.container-nav {
+.container-nav,
+.main-nav{
   display: flex;
   align-items: center;
 }
@@ -236,7 +231,6 @@ ul {
 }
 .qualities-img{
 	display: flex;
-	justify-content: center;
 	background-color: var(--background-box-light);
 	padding: 25px 100px;
 }
